@@ -1,29 +1,36 @@
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<div class="grid-1 gutter-40">
+  <div class="span-1">
+    <fieldset class="flakes-information-box">
+      <%= form_for(@user) do |f| %>
+        <% if @user.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+            <ul>
+            <% @user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="field">
+          <%= f.label :name %><br>
+          <%= f.text_field :name %>
+        </div>
+        <div class="field">
+          <%= f.label :case_type %><br>
+          <%= f.number_field :case_type %>
+        </div>
+        <div class="field">
+          <%= f.label :case_details %><br>
+          <%= f.text_area :case_details %>
+        </div>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
+      </fieldset>
+  </div>  
+</div>  
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :case_type %><br>
-    <%= f.number_field :case_type %>
-  </div>
-  <div class="field">
-    <%= f.label :case_details %><br>
-    <%= f.text_area :case_details %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>

@@ -2,8 +2,8 @@
 
 <h1>Listing Lawyers</h1>
 
-<table>
-  <thead>
+<table class="flakes-table" style="width:100%" cellpadding="5">
+  <thead align="center">
     <tr>
       <th>Name</th>
       <th>Case type</th>
@@ -14,7 +14,7 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody align="center">
     <% @lawyers.each do |lawyer| %>
       <tr>
         <td><%= lawyer.name %></td>

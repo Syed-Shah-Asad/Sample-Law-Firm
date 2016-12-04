@@ -7,8 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<fieldset>    
+<div class="flakes-frame">
+<div class="flakes-content">
+	<h1>Welcome To Asad's Law Firm</h1>
+	We support 4 types of cases. <br>
+	<li><legend>1: Murder</legend></li>
+	<li><legend>2: Sexual Harrasment</legend></li>
+	<li><legend>3: Theft</legend></li>
+	<li><legend>4: Divorse</legend></li>
 
-<%= yield %>
+      <div class="view-wrap">
+        <%= yield %>
+      </div>
+    
+    </div>
+  </div>
+</fieldset>
+ </div>
 
 </body>
 </html>
