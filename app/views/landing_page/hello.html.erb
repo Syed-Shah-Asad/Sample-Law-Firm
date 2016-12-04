@@ -1,26 +1,5 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong>Case type:</strong>
-  <%= @user.case_type %>
-</p>
-
-<p>
-  <strong>Case details:</strong>
-  <%= @user.case_details %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
-
-<br>
-
-<h2>Available Lawyers for you case</h2>
+<h1>LandingPage#hello</h1>
+<p>Find me in app/views/landing_page/hello.html.erb</p>
 
 <table>
   <thead>
@@ -41,10 +20,9 @@
         <td><%= lawyer.case_win %></td>
         <td><%= lawyer.case_loose %></td>
         <td><%= link_to 'Show', lawyer %></td>
+        <td><%= link_to 'Edit', edit_lawyer_path(lawyer) %></td>
+        <td><%= link_to 'Destroy', lawyer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-

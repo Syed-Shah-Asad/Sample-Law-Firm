@@ -9,7 +9,9 @@ class UsersController < ApplicationController
 
   # GET /users/1
   # GET /users/1.json
-  def show
+  def show  
+    current_user = User.find(params[:id])
+    @lawyers = Lawyer.where(:case_type => current_user.case_type)
   end
 
   # GET /users/new
