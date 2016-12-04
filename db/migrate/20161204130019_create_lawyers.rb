@@ -5,6 +5,7 @@ class CreateLawyers < ActiveRecord::Migration
       t.integer :case_type
       t.integer :case_win
       t.integer :case_loose
+      t.integer :fee
 
       t.timestamps null: false
     end

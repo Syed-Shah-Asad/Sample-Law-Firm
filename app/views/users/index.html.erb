@@ -1,24 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Users</h1>
-
-<table>
+<h1>Welcome To Asad's Law Firm</h1>
+<p>
+We support 4 types of cases. <br>
+<li>1: Murder</li>
+<li>2: Sexual Harrasment</li>
+<li>3: Theft</li>
+<li>4: Divorse</li>
+</p>
+<table border="1|1">
   <thead>
     <tr>
       <th>Name</th>
       <th>Case type</th>
       <th>Case details</th>
-      <th colspan="3"></th>
+      <th colspan="6"></th>
     </tr>
   </thead>
 
-  <tbody>
+  <tbody align="center">
     <% @users.each do |user| %>
       <tr>
         <td><%= user.name %></td>
         <td><%= user.case_type %></td>
         <td><%= user.case_details %></td>
-        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'List Layers', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -28,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<strong><%= link_to 'New User', new_user_path %></strong>

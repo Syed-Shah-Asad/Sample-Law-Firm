@@ -69,6 +69,6 @@ class LawyersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lawyer_params
-      params.require(:lawyer).permit(:name, :case_type, :case_win, :case_loose)
+      params.require(:lawyer).permit(:name, :case_type, :case_win, :case_loose, :fee)
     end
 end

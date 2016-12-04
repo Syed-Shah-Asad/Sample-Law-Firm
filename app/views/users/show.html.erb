@@ -22,8 +22,8 @@
 
 <h2>Available Lawyers for you case</h2>
 
-<table>
-  <thead>
+<table border="1">
+  <thead align="center">
     <tr>
       <th>Name</th>
       <th>Case type</th>
@@ -33,14 +33,14 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody align="center">
     <% @lawyers.each do |lawyer| %>
       <tr>
         <td><%= lawyer.name %></td>
         <td><%= lawyer.case_type %></td>
         <td><%= lawyer.case_win %></td>
         <td><%= lawyer.case_loose %></td>
-        <td><%= link_to 'Show', lawyer %></td>
+        <td><%= link_to 'Details', lawyer %></td>
       </tr>
     <% end %>
   </tbody>

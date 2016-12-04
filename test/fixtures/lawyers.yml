@@ -5,9 +5,11 @@ one:
   case_type: 1
   case_win: 1
   case_loose: 1
+  fee: 1
 
 two:
   name: MyString
   case_type: 1
   case_win: 1
   case_loose: 1
+  fee: 1

@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161204093826) do
+ActiveRecord::Schema.define(version: 20161204130421) do
 
   create_table "lawyers", force: :cascade do |t|
     t.string   "name"
     t.integer  "case_type"
     t.integer  "case_win"
     t.integer  "case_loose"
+    t.integer  "fee"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
