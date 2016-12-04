@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Lawyers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Case type</th>
+      <th>Case win</th>
+      <th>Case loose</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lawyers.each do |lawyer| %>
+      <tr>
+        <td><%= lawyer.name %></td>
+        <td><%= lawyer.case_type %></td>
+        <td><%= lawyer.case_win %></td>
+        <td><%= lawyer.case_loose %></td>
+        <td><%= link_to 'Show', lawyer %></td>
+        <td><%= link_to 'Edit', edit_lawyer_path(lawyer) %></td>
+        <td><%= link_to 'Destroy', lawyer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lawyer', new_lawyer_path %>
