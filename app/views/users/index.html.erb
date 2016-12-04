@@ -24,7 +24,7 @@ We support 4 types of cases. <br>
         <td><%= user.name %></td>
         <td><%= user.case_type %></td>
         <td><%= user.case_details %></td>
-        <td><%= link_to 'List Layers', user %></td>
+        <td><button><strong><%= link_to 'List Available Laywers', user %><strong></button></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
