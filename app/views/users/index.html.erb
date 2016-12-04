@@ -4,9 +4,9 @@
 
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Case type</th>
-      <th>Case details</th>
+      <th>Client</th>
+      <th>Case Type</th>
+      <th>Case-Details</th>
       <th colspan="6"></th>
     </tr>
   </thead>
@@ -16,8 +16,8 @@
       <tr>
         <td><%= user.name %></td>
         <td><%= user.case_type %></td>
+        <td><button><strong><%= link_to 'View List of Lawyers For This Case', user %></strong></button></td>
         <td><%= user.case_details %></td>
-        <td><button><strong><%= link_to 'List Available Laywers', user %><strong></button></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -27,6 +27,6 @@
 
 <br>
 
-<strong><%= link_to 'New User', new_user_path %></strong>
+<button><strong><%= link_to 'Add New User', new_user_path %></strong></button>
 
 </fieldset>
